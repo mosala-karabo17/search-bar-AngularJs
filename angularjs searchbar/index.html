@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <title>Question 5</title>
+<link rel="stylesheet" type="text/css" href="./css/style2.css">
+
+<!-- Include AngularJS from Google's CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+<script src="./javascript/myApp.js"></script>
+  </head>
+  <body >
+
+    <!--header navigation-->
+<header >
+
+    <div class="header">
+    <div class="logo">
+      <a href="index.html"><img src="./images/logo.png" alt="logo"></a>
+    </div>
+
+  </div>
+  <div class="links">
+      <a href="index.html">Home</a>
+      <a href="">Tutorials</a>
+      <a href="">About</a>
+      <a href="">Contact Us</a>
+  </div>
+</header>
+
+
+
+<h1 class="heading1">Tutorials</h1>
+
+<div>
+  <div ng-app="myApp">
+    <div ng-controller="myController">
+
+    <div >
+        <form class="search">
+          <input type="text" placeholder="Enter your search terms" ng-model="searchText"  >
+        </form>
+      </div>
+
+
+<table class="table_responsive" ng-repeat="language in languages | filter:searchText">
+  <tr>
+      <td>{{language.android}}</td>
+  </tr>
+  <tr>
+    <td>{{language.angularjs}}</td>
+  </tr>
+  <tr>
+      <td>{{language.csharp}}</td>
+  </tr>
+  <tr>
+      <td>{{language.css}}</td>
+  </tr>
+  <tr>
+      <td>{{language.html}}</td>
+  </tr>
+  <tr>
+      <td>{{language.javascript}}</td>
+  </tr>
+  <tr>
+      <td>{{language.jquery}}</td>
+  </tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  </body>
+</html>
